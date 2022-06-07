@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {View, Text, Button} from 'react-native';
-import { style } from '../styles/style';
+import {style} from '../styles/style';
 
 const Counter = (props: any) => {
   const [counter, setCounter] = useState(props.number);
+
 
   function handleDecreaseButton() {
     setCounter(counter - 1);
@@ -14,7 +15,7 @@ const Counter = (props: any) => {
   }
 
   return (
-    <>
+    <View style={style.container}>
       <Text style={style.title}>Contador</Text>
       <View>
         <Text style={style.counter}>{counter}</Text>
@@ -31,7 +32,7 @@ const Counter = (props: any) => {
           onPress={() => handleIncreaseButton()}
         />
       </View>
-    </>
+    </ View>
   );
 };
 
