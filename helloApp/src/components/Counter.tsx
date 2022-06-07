@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {View, Text, Button} from 'react-native';
 import {style} from '../styles/style';
 
-const Counter = (props: any) => {
-  const [counter, setCounter] = useState(props.number);
+import { EnterNumberContext } from '../contexts/enterNumber';
 
+const Counter = () => {
+  const initialNumberContext = useContext(EnterNumberContext)
+
+  const [counter, setCounter] = useState(initialNumberContext.number);
 
   function handleDecreaseButton() {
     setCounter(counter - 1);
