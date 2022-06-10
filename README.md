@@ -17,6 +17,8 @@ I focused on three concepts:
 
 The counter only adds or subtracts 1 from the target number. The goal isn't to complex anything, only to get started with important React concepts.
 
+![react-native_gif](assets/react-native_github.gif)
+
 
 # References
 
